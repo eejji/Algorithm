@@ -7,3 +7,5 @@ def solution(arr):
         if arr[i] != new[-1]:
             new.append(arr[i])
     return new
+
+print(solution)
