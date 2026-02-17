@@ -1,0 +1,11 @@
+import math
+
+number = math.factorial(int(input()))
+number = str(number)
+
+cnt = 1
+while True:
+    if number[-cnt] != '0':
+        print(cnt - 1)
+        break
+    cnt += 1
