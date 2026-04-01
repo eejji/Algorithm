@@ -1,0 +1,23 @@
+
+def solution(data, ext, val_ext, sort_by):
+    
+    answer = []
+    
+    col_dict = {'code':0, 'date':1, 'maximum':2, 'remain':3}
+    
+    #[[1, 20300104, 100, 80],
+    ext_idx = col_dict[ext] # 1
+    sort_idx = col_dict[sort_by] # 3
+    
+    sort_dict = {}
+    for i, d in enumerate(data):
+        if d[ext_idx] < val_ext:
+            sort_dict[d[sort_idx]] = i
+    
+    keylist = sorted(sort_dict)
+    for key in keylist:
+        answer.append(data[sort_dict[key]])
+        
+        
+    
+    return answer
